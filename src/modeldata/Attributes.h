@@ -114,91 +114,95 @@ namespace modeldata {
 	struct Attributes : public json::ConstSerializable {
 		unsigned long value;
         std::map<std::string, MeshVertexAttrib> attributemap;
-        Attributes() : value(0) 
+        
+        void setUpAttributesMap()
         {
             MeshVertexAttrib v1;
             v1.name = "VERTEX_ATTRIB_POSITION";
             v1.size = 3;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_POSITION"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_NORMAL";
             v1.size = 3;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_NORMAL"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_TEX_COORD";
             v1.size = 2;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_TEX_COORD"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_TEX_COORD1";
             v1.size = 2;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_TEX_COORD1"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_TEX_COORD2";
             v1.size = 2;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_TEX_COORD2"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_TEX_COORD3";
             v1.size = 2;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_TEX_COORD3"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_TEX_COORD4";
             v1.size = 2;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_TEX_COORD4"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_TEX_COORD5";
             v1.size = 2;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_TEX_COORD5"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_TEX_COORD6";
             v1.size = 2;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_TEX_COORD6"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_TEX_COORD7";
             v1.size = 2;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_TEX_COORD7"]= v1;
-
-
+            
+            
             v1.name = "VERTEX_ATTRIB_BLEND_WEIGHT";
             v1.size = 4;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_BLEND_WEIGHT"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_BLEND_INDEX";
             v1.size = 4;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_BLEND_INDEX"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_COLOR";
             v1.size = 4;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_COLOR"]= v1;
-
-
+            
+            
             v1.name = "VERTEX_ATTRIB_TANGENT";
             v1.size = 3;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_TANGENT"]= v1;
-
+            
             v1.name = "VERTEX_ATTRIB_BINORMAL";
             v1.size = 3;
             v1.type = "GL_FLOAT";
             attributemap["VERTEX_ATTRIB_BINORMAL"]= v1;
-
+        }
+        Attributes() : value(0) 
+        {
+            setUpAttributesMap();
         }
 
-		Attributes(const unsigned long &v) : value(v) {}
+		Attributes(const unsigned long &v) : value(v) { setUpAttributesMap(); }
 
-		Attributes(const Attributes &copyFrom) : value(copyFrom.value) {}
+		Attributes(const Attributes &copyFrom) : value(copyFrom.value) { setUpAttributesMap(); }
 
 		inline bool operator==(const Attributes& rhs) const {
 			return value == rhs.value;

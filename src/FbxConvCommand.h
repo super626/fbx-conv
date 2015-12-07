@@ -17,7 +17,7 @@
 #ifndef FBXCONVCOMMAND_H
 #define FBXCONVCOMMAND_H
 
-//#define ALLOW_INPUT_TYPE
+#define ALLOW_INPUT_TYPE
 #include "Settings.h"
 #include <string>
 #include "log/log.h"
@@ -152,8 +152,8 @@ private:
             return;
         }
 #ifdef ALLOW_INPUT_TYPE
-		if (inType == FILETYPE_AUTO)
-			inType = guessType(inFile, FILETYPE_IN_DEFAULT);
+		if (settings->inType == FILETYPE_AUTO)
+			settings->inType = guessType(settings->inFile, FILETYPE_IN_DEFAULT);
 #else
 		settings->inType = FILETYPE_IN_DEFAULT;
 #endif
@@ -192,6 +192,8 @@ private:
 			return FILETYPE_G3DB;
         else if (stricmp(arg, "c3t")==0)
 			return FILETYPE_G3DJ;
+        else if (strcmp(arg, "raw") == 0)
+            return FILETYPE_RAW;
 		if (def < 0)
 			log->error(error = log::eCommandLineUnknownFiletype, arg);
 		return def;

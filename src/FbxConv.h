@@ -112,6 +112,8 @@ class FbxConv {
 			switch(type) {
 			case FILETYPE_FBX: 
 				return new readers::FbxConverter(log, simpleTextureCallback);
+            case FILETYPE_RAW:
+                return new readers::RawReader();
 			case FILETYPE_G3DB:
 			case FILETYPE_G3DJ:
 			default:

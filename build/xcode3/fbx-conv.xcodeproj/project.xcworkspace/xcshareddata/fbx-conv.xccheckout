@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8523B213-BF4E-455A-A71A-C2972B75E98A</string>
+	<string>D8020ADF-066A-4503-98D4-45DE17F88626</string>
 	<key>IDESourceControlProjectName</key>
 	<string>fbx-conv</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>895B8B25-27D9-4F5B-99A0-2B1639703AA2</key>
-		<string>ssh://github.com/lvlonggame/fbx-conv.git</string>
+		<key>FB7A9A42816BAEC7019010F4563EAC94C12DBCDA</key>
+		<string>https://github.com/super626/fbx-conv</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>build/xcode3/fbx-conv.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>895B8B25-27D9-4F5B-99A0-2B1639703AA2</key>
+		<key>FB7A9A42816BAEC7019010F4563EAC94C12DBCDA</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/lvlonggame/fbx-conv.git</string>
+	<string>https://github.com/super626/fbx-conv</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>895B8B25-27D9-4F5B-99A0-2B1639703AA2</string>
+	<string>FB7A9A42816BAEC7019010F4563EAC94C12DBCDA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>895B8B25-27D9-4F5B-99A0-2B1639703AA2</string>
+			<string>FB7A9A42816BAEC7019010F4563EAC94C12DBCDA</string>
 			<key>IDESourceControlWCCName</key>
-			<string>fbx-conv-master</string>
+			<string>fbx-conv</string>
 		</dict>
 	</array>
 </dict>
